@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAP ER BANK</title>
+    <!-- tailwindcss -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container mx-auto mt-24 w-1/2">
+        <h1 class="text-center text-2xl font-bold">WELCOME TO <span class="text-lime-600">BAP ER BANK</span> </h1>
+        <!-- LOGIN FORM -->
+        <div id="login-form">
+            <label class="block">
+                <span class="block text-sm font-medium text-slate-700">Email</span>
+                <input id="input-email" type="email" class="peer mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
+                focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500" />
+                <p class="mt-2 invisible peer-invalid:visible text-pink-600 text-sm">
+                    Please provide a valid email address.
+                </p>
+            </label>
+            <label class="block">
+                <span class="block text-sm font-medium text-slate-700">Password</span>
+                <input id="input-password" type="password" class=" mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
+                focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500" />
+            </label>
+            <button id="login-btn"
+                class="rounded bg-indigo-500 text-white px-3.5 py-1.5 mt-6 font-medium">Login</button>
+        </div>
+        <!-- deposit,withdrow,total-amount -->
+        <div id="account-section">
+            <div class="grid grid-cols-3 gap-4 text-white mt-5">
+                <div class="bg-green-900 text-center rounded-lg px-8 py-8">
+                    <h1>Deposit</h1>
+                    <h1>$<span id="Deposit-amount">00</span></h1>
+                </div>
+                <div class="bg-red-900 text-center rounded-lg px-8 py-8">
+                    <h1>Withdrow</h1>
+                    <h1>$<span id="Withdrow-amount">00</span></h1>
+                </div>
+                <div class="bg-yellow-500 text-center rounded-lg px-8 py-8">
+                    <h1>Balance</h1>
+                    <h1>$<span id="Balance-amount">1200</span></h1>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4 mt-5">
+                <div>
+                    <label class="block">
+                        <span class="block text-sm font-medium text-slate-700">Deposit</span>
+                        <input id="input-deposit" type="number" class=" mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
+                        focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500" />
+                    </label>
+                    <button id="Deposit-btn"
+                        class="rounded bg-green-900 text-white px-1.5 py-1.5 mt-1 font-medium">Deposit</button>
+                </div>
+                <div>
+                    <label class="block">
+                        <span class="block text-sm font-medium text-slate-700">Withdrow</span>
+                        <input id="input-withdrow" type="number" class=" mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
+                            focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500" />
+                    </label>
+                    <button id="Withdrow-btn"
+                        class="rounded bg-red-900 text-white px-1.5 py-1.5 mt-1 font-medium">Withdrow</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+
+    </script>
+
+
+
+
+
+
+
+
+
+    <!-- own script file -->
+    <script src="script.js"></script>
+</body>
+
+</html>
