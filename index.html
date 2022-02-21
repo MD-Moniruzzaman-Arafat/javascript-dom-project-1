@@ -37,15 +37,15 @@
             <div class="grid grid-cols-3 gap-4 text-white mt-5">
                 <div class="bg-green-900 text-center rounded-lg px-8 py-8">
                     <h1>Deposit</h1>
-                    <h1>$<span id="Deposit-amount">00</span></h1>
+                    <h1>$<span id="deposit-amount">00</span></h1>
                 </div>
                 <div class="bg-red-900 text-center rounded-lg px-8 py-8">
                     <h1>Withdrow</h1>
-                    <h1>$<span id="Withdrow-amount">00</span></h1>
+                    <h1>$<span id="withdrow-amount">00</span></h1>
                 </div>
                 <div class="bg-yellow-500 text-center rounded-lg px-8 py-8">
                     <h1>Balance</h1>
-                    <h1>$<span id="Balance-amount">1200</span></h1>
+                    <h1>$<span id="balance-amount">1200</span></h1>
                 </div>
             </div>
 
@@ -56,7 +56,7 @@
                         <input id="input-deposit" type="number" class=" mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
                         focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500" />
                     </label>
-                    <button id="Deposit-btn"
+                    <button onclick="account('deposit')" id="deposit-btn"
                         class="rounded bg-green-900 text-white px-1.5 py-1.5 mt-1 font-medium">Deposit</button>
                 </div>
                 <div>
@@ -65,7 +65,7 @@
                         <input id="input-withdrow" type="number" class=" mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
                             focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500" />
                     </label>
-                    <button id="Withdrow-btn"
+                    <button onclick="account('withdrow')" id="withdrow-btn"
                         class="rounded bg-red-900 text-white px-1.5 py-1.5 mt-1 font-medium">Withdrow</button>
                 </div>
             </div>

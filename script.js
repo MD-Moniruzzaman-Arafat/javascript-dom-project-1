@@ -17,59 +17,41 @@ const login = document.getElementById('login-btn').addEventListener('click', fun
 });
 
 // account section
-
-// deposit button
-document.getElementById('Deposit-btn').addEventListener('click', function () {
+// function
+function account(deposit) {
     // input deposit id
-    const inputDeposit = document.getElementById('input-deposit');
-    const inputDepositNumber = parseInt(inputDeposit.value);
+    const inputAmount = document.getElementById('input-' + deposit);
+    const inputAmountNumber = parseInt(inputAmount.value);
 
     // Deposit amount id
-    const depositAmount = document.getElementById('Deposit-amount');
+    const depositAmount = document.getElementById(deposit + '-amount');
     const depositAmountNumber = parseInt(depositAmount.innerText);
 
-    // new Deposit amount
-    const newDepositAmount = inputDepositNumber + depositAmountNumber;
-    depositAmount.innerText = newDepositAmount;
-
     // Balance amount id
-    const balanceAmount = document.getElementById('Balance-amount');
+    const balanceAmount = document.getElementById('balance-amount');
     const balanceAmountNumber = parseInt(balanceAmount.innerText);
 
-    // new balance amount
-    const newBalanceAmount = balanceAmountNumber + inputDepositNumber;
-    balanceAmount.innerText = newBalanceAmount;
-
-    // input fild clear
-    inputDeposit.value = '';
-});
-
-
-// withdrow button
-document.getElementById('Withdrow-btn').addEventListener('click', function () {
-    // input withdrow id
-    const inputWithdrow = document.getElementById('input-withdrow');
-    const inputWithdrowNumber = parseInt(inputWithdrow.value);
-
-    // Withdrow amount id
-    const withdrowAmount = document.getElementById('Withdrow-amount');
-    const withdrowAmountNumber = parseInt(withdrowAmount.innerText);
-
-    // new withdrow amount
-    const newWithdrowAmount = inputWithdrowNumber + withdrowAmountNumber;
-    withdrowAmount.innerText = newWithdrowAmount;
-
-    // Balance amount id
-    const balanceAmount = document.getElementById('Balance-amount');
-    const balanceAmountNumber = parseInt(balanceAmount.innerText);
-
-    // new balance amount
-    const newBalanceAmount = balanceAmountNumber - inputWithdrowNumber;
-    balanceAmount.innerText = newBalanceAmount;
-
-    // input fild clear
-    inputWithdrow.value = '';
-});
+    if (deposit == 'deposit' && inputAmount.value > 0) {
+        // new Deposit amount
+        const newDepositAmount = inputAmountNumber + depositAmountNumber;
+        depositAmount.innerText = newDepositAmount;
+        // new balance amount
+        const newBalanceAmount = balanceAmountNumber + inputAmountNumber;
+        balanceAmount.innerText = newBalanceAmount;
+        // input fild clear
+        inputAmount.value = '';
+    }
+    if (deposit == 'withdrow' && inputAmount.value > 0) {
+        // new Deposit amount
+        const newDepositAmount = inputAmountNumber + depositAmountNumber;
+        depositAmount.innerText = newDepositAmount;
+        // new balance amount
+        const newBalanceAmount = balanceAmountNumber - inputAmountNumber;
+        balanceAmount.innerText = newBalanceAmount;
+        // input fild clear
+        inputAmount.value = '';
+    }
+}
 
 
 
